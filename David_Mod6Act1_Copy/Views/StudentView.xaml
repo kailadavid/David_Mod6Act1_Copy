@@ -18,7 +18,10 @@
                 <Button WidthRequest="150" Text="Add" Command="{Binding AddStudentCommand}"/>
             </StackLayout>
 
-            <ListView Grid.Row="1" ItemsSource="{Binding Students}">
+            <ListView Grid.Row="1"
+                      x:Name="lstStudent"
+                      ItemTapped="OnItemTapped"
+                      ItemsSource="{Binding Students}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
